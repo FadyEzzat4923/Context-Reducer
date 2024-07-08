@@ -1,17 +1,12 @@
-import Player from "./components/Player";
-import TimerChallenge from "./components/TimerChallenge";
-Player;
+import Header from "./components/Header.jsx";
+import Shop from "./components/Shop.jsx";
+import CartContextProvider from "./store/cart-context.jsx";
 function App() {
   return (
-    <>
-      <Player />
-      <div id="challenges">
-        <TimerChallenge title="Easy" targetTime={1} />
-        <TimerChallenge title="Not Easy" targetTime={5} />
-        <TimerChallenge title="Getting Tough" targetTime={10} />
-        <TimerChallenge title="Pros Only" targetTime={15} />
-      </div>
-    </>
+    <CartContextProvider>
+      <Header />
+      <Shop />
+    </CartContextProvider>
   );
 }
 
